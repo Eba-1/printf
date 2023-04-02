@@ -11,7 +11,7 @@
  * @format: A string format string to print arguments
  * Return: 1 for true or 2 false
  */
-int handle_print(const char *fmt, int *ind, va_list ls, char buffer[], int flags, int width, int prec, int size)
+int hPrint(const char *fmt, int *ind, va_list ls, char buffer[], int flags, int width, int prec, int size)
 {
 	int i, unknow_len = 0, printed_chars = -1;
 	fmt_t fmt_types[] = {
