@@ -43,8 +43,7 @@ int print_unsigned(va_list types, char buffer[],
  * @prec: Precision specification
  * Return: The number of characters to be printed
  */
-int print_hexa(va_list types, char map_to[], char buffer[],
-	int flags, char flag_ch, int width, int prec, int size)
+int print_hexa(va_list types, char map_to[], char buffer[], int flags, char flag_ch, int width, int prec, int size)
 {
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
@@ -86,8 +85,7 @@ int print_hexa(va_list types, char map_to[], char buffer[],
  * @prec: Precision specification
  * Return: The number of characters to be printed
  */
-int print_octal(va_list types, char buffer[],
-	int flags, int width, int prec, int size)
+int print_octal(va_list types, char buffer[], int flags, int width, int prec, int size)
 {
 
 	int i = BUFF_SIZE - 2;
@@ -127,8 +125,7 @@ int print_octal(va_list types, char buffer[],
  * @prec: Precision specification
  * Return: The number of characters to be printed
  */
-int print_hexadecimal(va_list types, char buffer[],
-	int flags, int width, int prec, int size)
+int print_hexadecimal(va_list types, char buffer[], int flags, int width, int prec, int size)
 {
 	return (print_hexa(types, "0123456789abcdef", buffer,
 		flags, 'x', width, prec, size));
@@ -144,9 +141,7 @@ int print_hexadecimal(va_list types, char buffer[],
  * @prec: Precision specification
  * Return: The number of characters to be printed
  */
-int print_hexa_upper(va_list types, char buffer[],
-	int flags, int width, int prec, int size)
+int print_hexa_upper(va_list types, char buffer[], int flags, int width, int prec, int size)
 {
-	return (print_hexa(types, "0123456789ABCDEF", buffer,
-		flags, 'X', width, prec, size));
+	return (print_hexa(types, "0123456789ABCDEF", buffer, flags, 'X', width, prec, size));
 }
